@@ -1,4 +1,4 @@
-// credit to my friend who helped so much making the finder ❤
+// credit to my friend bighuberrt who helped so much making the finder ❤
 const anyLinkRegex = /(https?:\/\/[^\s"'<>]+)/g;
 
 document.addEventListener('keydown', async (event) => {
@@ -47,13 +47,14 @@ document.addEventListener('keydown', async (event) => {
                 if (snatchedData.length > 0) {
                     const resultString = snatchedData.join('\n') + "\nsnatched with donald's link snatcher 🔥";
                     navigator.clipboard.writeText(resultString).then(() => {
-                        alert("✅ SUCCESS! Un-shortened and verified:\n\n" + resultString);
+                        alert("link link link sahurrrrrrr:\n\n" + resultString);
                     });
                 } else {
-                    alert("❌ Checked links, but NONE went to the right game (or they were fake scam sites).");
+                    alert("Checked links, but NONE went to real SAB #fuckthescammers.");
                 }
             }
         });
     }
 
 });
+
