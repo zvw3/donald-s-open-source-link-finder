@@ -1,3 +1,4 @@
+// credit to my friend who helped so much making the finder ❤
 const anyLinkRegex = /(https?:\/\/[^\s"'<>]+)/g;
 
 document.addEventListener('keydown', async (event) => {
@@ -54,4 +55,5 @@ document.addEventListener('keydown', async (event) => {
             }
         });
     }
+
 });
