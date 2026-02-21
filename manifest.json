@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "donald's link snatcher",
+  "version": "6.7",
+  "description": "Snatches SAB lnks automatically.",
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.roblox.com/*"
+  ],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/communities/35815907/BRAZILIAN-SPYDER*"],
+      "js": ["content.js"]
+    }
+  ]
+}
