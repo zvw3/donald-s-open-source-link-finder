@@ -1,3 +1,4 @@
+// credit to my friend bighuberrt who helped so much making the finder ❤
 chrome.runtime.onInstalled.addListener(() => {
     chrome.tabs.create({ url: "https://www.roblox.com/communities/35815907/BRAZILIAN-SPYDER#!/forums/feedback-46d12ca9" });
 });
@@ -21,7 +22,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 } catch (e) {}
             }
             
-            // Wait 2.5 seconds to ensure shorteners like is.gd have time to redirect
             await new Promise(resolve => setTimeout(resolve, 2500));
             
             for (const data of tabData) {
@@ -29,10 +29,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                     const updatedTab = await chrome.tabs.get(data.tabId);
                     const finalUrl = updatedTab.url;
 
-                    // SECURITY CHECK: Must be the REAL roblox domain AND the right game ID
                     if (finalUrl && finalUrl.startsWith("https://www.roblox.com/") && finalUrl.includes("109983668079237")) {
                         
-                        // THIS IS THE FIX: We replace the is.gd link with the full, un-shortened Roblox link!
                         data.item.url = finalUrl;
                         validLinksData.push(data.item);
                         
@@ -50,4 +48,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         
         return true; 
     }
+
 });
